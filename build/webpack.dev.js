@@ -17,4 +17,5 @@ module.exports = merge(common, {
     splitChunks: false,
   },
   cache: true,
+  plugins: [new Dotenv()],
 });
