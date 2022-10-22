@@ -7,6 +7,7 @@ export const Card = createTheme({
       styleOverrides: {
         root: {
           borderRadius: 8,
+          padding: 8,
         },
       },
     },

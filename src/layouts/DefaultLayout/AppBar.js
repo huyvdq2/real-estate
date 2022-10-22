@@ -1,41 +1,26 @@
-import * as React from 'react';
+import MenuIcon from '@mui/icons-material/Menu';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
+import Container from '@mui/material/Container';
+import IconButton from '@mui/material/IconButton';
+import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
-import { useTheme } from '@mui/material';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import * as React from 'react';
 
-const pages = ['Products', 'Pricing', 'Blog'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const pages = ['Mua bán', 'Cho thuê', 'Sang nhượng', 'Tin tức'];
 
 const ResponsiveAppBar = () => {
-  const theme = useTheme();
-
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
-  };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
   };
 
   return (
@@ -63,7 +48,7 @@ const ResponsiveAppBar = () => {
               onClick={handleOpenNavMenu}
               color="inherit"
             >
-              <MenuIcon />
+              <MenuIcon color="primary" />
             </IconButton>
             <Menu
               id="menu-appbar"
@@ -116,6 +101,14 @@ const ResponsiveAppBar = () => {
                 {page}
               </Button>
             ))}
+          </Box>
+          <Box sx={{ flexGrow: 1 }} textAlign="right">
+            <Typography variant="body2" color="GrayText">
+              Thông tin liên hệ
+            </Typography>
+            <Typography fontWeight="500" variant="body1" color="CaptionText">
+              0972.879.799 (Anh Huy)
+            </Typography>
           </Box>
         </Toolbar>
       </Container>

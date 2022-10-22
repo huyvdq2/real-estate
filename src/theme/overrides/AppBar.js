@@ -1,6 +1,4 @@
 import { createTheme } from '@mui/material';
-import React from 'react';
-import { palette } from '../palette';
 
 export const AppBar = createTheme({
   components: {
@@ -8,6 +6,7 @@ export const AppBar = createTheme({
       styleOverrides: {
         root: {
           backgroundColor: 'white',
+          boxShadow: 'none',
         },
       },
     },
